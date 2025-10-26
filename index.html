@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PodcastApp | DJS01 - Palesa Malatshi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>PodcastApp</h1>
+    <div class="search-user">
+      <input type="text" placeholder="Search podcasts..." id="searchInput"/>
+      <div class="user-avatar"></div>
+    </div>
+  </header>
+  <main>
+    <section class="filters">
+      <select id="genreFilter">
+        <option value="all">All Genres</option>
+        <!-- JS: genre options go here -->
+      </select>
+      <select id="sortPodcasts">
+        <option value="recent">Recently Updated</option>
+        <option value="popular">Most Popular</option>
+        <option value="new">Newest</option>
+      </select>
+    </section>
+    <section id="podcastGrid" class="podcast-grid"></section>
+  </main>
+
+  <div id="podcastModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal">&times;</button>
+      <!-- JS: modal info will go here -->
+    </div>
+  </div>
+
+  <footer>
+    <p>Created by Palesa Malatshi</p>
+  </footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
