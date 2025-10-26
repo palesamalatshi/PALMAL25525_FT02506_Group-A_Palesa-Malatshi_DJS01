@@ -3,42 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PodcastApp | DJS01 - Palesa Malatshi</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>PodcastApp | DJS01 – Palesa Malatshi</title>
+  <!-- Font Awesome for icons (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>PodcastApp</h1>
-    <div class="search-user">
-      <input type="text" placeholder="Search podcasts..." id="searchInput"/>
-      <div class="user-avatar"></div>
+  <!-- Header with brand and quick actions -->
+  <header class="topbar">
+    <div class="topbar-content">
+      <div class="brand">
+        <i class="fas fa-podcast"></i>
+        <span class="brand-text">PodcastApp</span>
+      </div>
+      <div class="topbar-actions">
+        <input type="search" id="searchInput" class="search-box" placeholder="Search podcasts..." aria-label="Search podcasts" autocomplete="off" />
+        <span class="emoji-icon" aria-label="User icon" role="img">👤</span>
+
+</button>
+
+      </div>
     </div>
   </header>
+  
+  <!-- Main content -->
   <main>
-    <section class="filters">
-      <select id="genreFilter">
-        <option value="all">All Genres</option>
-        <!-- JS: genre options go here -->
-      </select>
-      <select id="sortPodcasts">
-        <option value="recent">Recently Updated</option>
-        <option value="popular">Most Popular</option>
-        <option value="new">Newest</option>
-      </select>
+    <!-- Filter and sort controls -->
+    <section class="controls-row">
+      <div class="filters">
+        <label for="genreFilter" class="filter-label">Genre:</label>
+        <select id="genreFilter" class="filter-select" aria-label="Filter podcasts by genre">
+          <option value="all">All Genres</option>
+          <!-- Options populated by JS -->
+        </select>
+        <label for="sortPodcasts" class="filter-label">Sort by:</label>
+        <select id="sortPodcasts" class="filter-select" aria-label="Sort podcasts">
+          <option value="updated">Recently Updated</option>
+          <option value="title">Title</option>
+          <option value="seasons">Number of Seasons</option>
+        </select>
+      </div>
     </section>
-    <section id="podcastGrid" class="podcast-grid"></section>
+
+    <!-- Podcast grid area -->
+    <section class="podcasts-area">
+      <div class="podcasts-grid" id="podcastsGrid" aria-live="polite">
+        <!-- Podcasts will be rendered here -->
+      </div>
+    </section>
   </main>
 
-  <div id="podcastModal" class="modal hidden">
-    <div class="modal-content">
-      <button id="closeModal">&times;</button>
-      <!-- JS: modal info will go here -->
+  <!-- Modal overlay for podcast details -->
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal" role="document">
+      <button class="modal-close" id="modalClose" type="button" title="Close modal" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-content" id="modalContent">
+        <!-- Details injected by JS -->
+      </div>
     </div>
   </div>
 
+  <!-- Footer branding -->
   <footer>
-    <p>Created by Palesa Malatshi</p>
+    <div class="footer-inner">
+      <p>Created by Palesa Malatshi &mdash; 2025 &bull; DJS01 Vanilla JS Project</p>
+    </div>
   </footer>
-  <script type="module" src="app.js"></script>
+
+  <!-- Project data and main JS logic -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
