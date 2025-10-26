@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PodcastApp | DJS01 – Palesa Malatshi</title>
   <!-- Font Awesome for icons (CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <!-- Custom stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -20,9 +20,6 @@
       <div class="topbar-actions">
         <input type="search" id="searchInput" class="search-box" placeholder="Search podcasts..." aria-label="Search podcasts" autocomplete="off" />
         <span class="emoji-icon" aria-label="User icon" role="img">👤</span>
-
-</button>
-
       </div>
     </div>
   </header>
@@ -48,7 +45,7 @@
 
     <!-- Podcast grid area -->
     <section class="podcasts-area">
-      <div class="podcasts-grid" id="podcastsGrid" aria-live="polite">
+      <div class="podcasts-grid" id="podcastsGrid" aria-live="polite" aria-label="Podcast list">
         <!-- Podcasts will be rendered here -->
       </div>
     </section>
@@ -66,12 +63,7 @@
     </div>
   </div>
 
-  <!-- Footer branding -->
-  <footer>
-    <div class="footer-inner">
-      <p>Created by Palesa Malatshi &mdash; 2025 &bull; DJS01 Vanilla JS Project</p>
-    </div>
-  </footer>
+  <!-- Removed footer to allow podcast grid display -->
 
   <!-- Project data and main JS logic -->
   <script src="data.js"></script>
