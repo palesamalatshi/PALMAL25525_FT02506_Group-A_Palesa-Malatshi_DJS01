@@ -28,3 +28,46 @@ This project is a fully responsive podcast browsing web application built entire
 ### Installation
 
 1. Clone the repo:
+https://github.com/palesamalatshi/PALMAL25525_FT02506_Group-A_Palesa-Malatshi_DJS01
+
+
+2. Navigate into the folder:
+PALMAL25525_FT02506_Group-A_Palesa-Malatshi_DJS01
+
+
+3. Open `index.html` in your browser.
+
+### Usage
+
+- Use the genre dropdown to filter podcasts.
+- Use the sort dropdown to reorder podcasts.
+- Use the search bar to find podcasts by title or description.
+- Click on a podcast card to view detailed information in a modal.
+- Close the modal by clicking the close button, outside the modal content, or pressing Escape.
+
+## Technologies Used
+
+- Vanilla JavaScript (ES6+)
+- HTML5
+- CSS3 (Flexbox layout)
+- Font Awesome for icons
+
+## Inspirations and References
+
+This project draws inspiration from the Mayothi Beauty Studio for the styling and a student exemplar project demonstrating structured code and UI/UX excellence.
+
+## Future Enhancements
+
+- Add pagination or infinite scrolling for large podcast datasets.
+- Add user authentication and personalized podcast subscriptions.
+- Implement audio playback directly within the app.
+- Optimize for performance with lazy loading images and code splitting.
+
+## About the Author
+
+This project was built by Palesa Malatshi as part of the DJS01 challenge to demonstrate a deep understanding of JavaScript application development, responsive design, and clean code principles.
+
+---
+
+Thank you for reviewing my project!
+
