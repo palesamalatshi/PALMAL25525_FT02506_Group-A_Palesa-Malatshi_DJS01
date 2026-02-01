@@ -1,73 +1,76 @@
-# Vanilla JS Podcast App - DJS01 Project
+# Unmuted Podcast App
 
-## Overview
-
-This project is a fully responsive podcast browsing web application built entirely with Vanilla JavaScript, HTML5, and CSS3. Inspired by the Mayothi Beauty Studio aesthetic, the app features a clean and modern UI that allows users to:
-
-- Explore podcast previews with cover images, titles, seasons, genres, and update dates.
-- Filter podcasts by genre, sort them by update time, title, or number of seasons.
-- Search podcasts live by title or description.
-- Click on a podcast to open a detailed modal with extended information, including season lists.
-
-## Features
-
-- Responsive flexbox-based grid layout with aesthetically pleasing card designs.
-- Accessible and user-friendly modal experience without page reloads.
-- Dynamic filtering, sorting, and search to enhance user discovery.
-- Consistent branding with a warm, soft bronze/cream color palette.
-- Keyboard navigation and ARIA roles for enhanced accessibility.
-- Inline documentation and code comments for easy maintenance and scalability.
-
-## Getting Started
-
-### Prerequisites
-
-- Modern web browser with ES6+ support.
-- No backend required; the app works entirely on the frontend.
-
-### Installation
-
-1. Clone the repo:
-https://github.com/palesamalatshi/PALMAL25525_FT02506_Group-A_Palesa-Malatshi_DJS01
-
-
-2. Navigate into the folder:
-PALMAL25525_FT02506_Group-A_Palesa-Malatshi_DJS01
-
-
-3. Open `index.html` in your browser.
-
-### Usage
-
-- Use the genre dropdown to filter podcasts.
-- Use the sort dropdown to reorder podcasts.
-- Use the search bar to find podcasts by title or description.
-- Click on a podcast card to view detailed information in a modal.
-- Close the modal by clicking the close button, outside the modal content, or pressing Escape.
-
-## Technologies Used
-
-- Vanilla JavaScript (ES6+)
-- HTML5
-- CSS3 (Flexbox layout)
-- Font Awesome for icons
-
-## Inspirations and References
-
-This project draws inspiration from the Mayothi Beauty Studio for the styling and a student exemplar project demonstrating structured code and UI/UX excellence.
-
-## Future Enhancements
-
-- Add pagination or infinite scrolling for large podcast datasets.
-- Add user authentication and personalized podcast subscriptions.
-- Implement audio playback directly within the app.
-- Optimize for performance with lazy loading images and code splitting.
-
-## About the Author
-
-This project was built by Palesa Malatshi as part of the DJS01 challenge to demonstrate a deep understanding of JavaScript application development, responsive design, and clean code principles.
+A **modular Vanilla JavaScript application** that displays a curated list of podcasts as cards and shows detailed information in a modal when a card is clicked. Designed for accessibility, clean UX, and easy maintainability.
 
 ---
 
-Thank you for reviewing my project!
+## Features
 
+- Dynamic rendering of **podcast cards** with cover images, titles, genres, and last updated dates.
+- Modal with **detailed information**:
+  - Full description
+  - Genres/themes
+  - Seasons and episode counts
+- Clean **date formatting** for last updated timestamps.
+- Modular design using **factory functions** for cards and modals.
+- **Single Responsibility Principle (SRP)**-compliant utilities and components.
+- Responsive design for **mobile and desktop**.
+- Darkened background blur when modal is open for better focus.
+
+---
+
+## Project Structure
+
+/src
+│
+├── components/
+│ ├── createPodcastCard.js # Factory function to render podcast cards
+│ └── createModal.js # Factory function to render modals
+│
+├── utils/
+│ ├── DateUtils.js # Functions for formatting dates
+│ └── GenreService.js # Helper functions for genre/theme mapping
+│
+├── views/
+│ └── createGrid.js # Builds the main grid layout
+│
+├── data.js # Podcast, genres, and seasons data
+└── index.js # Entry point; initializes grid and modal behavior
+
+
+---
+
+## How to Run
+
+1. Clone or download the repository.
+2. Open `index.html` in your browser.
+3. Browse through podcast cards.
+4. Click a podcast card to open the **modal** with detailed info.
+5. Click the "×" button or the background to **close the modal**.
+
+---
+
+## Notes
+
+- Each podcast has a **unique cover image** and **last updated date**.
+- Genres are referred to as **themes** in the app.
+- Responsive layout ensures usability on mobile and desktop.
+- The modal automatically blurs the background content when open.
+
+---
+
+## Tech Stack
+
+- **Vanilla JavaScript (ES6 modules)**
+- **CSS Grid** for card layout
+- **Flexbox** for modal and banner sections
+- Optional: [Pexels](https://www.pexels.com/) images for podcast covers
+
+---
+
+## Future Improvements
+
+- Filter podcasts by theme.
+- Sort podcasts by last updated date.
+- Add search functionality.
+- Integrate with a backend API to fetch podcasts dynamically.
